@@ -1,6 +1,6 @@
 # htmlAvanzado
 Se sube contenido de la asginatura HTML Avanzado
-
+--------------------------------------------------------
 Git
 1. Creamos el repositorio
 2. git clone https://github.com/JuanRivera991/htmlAvanzado.git
@@ -9,3 +9,12 @@ Git
 5. git status -> Verifica si se subieron los cambios
 6. git commit -m "Descripcion de la tarea realizada" 
 7. git push origin main -> Se suben los cambios a Github
+----------------------------------------------------------
+Clase 2
+Actividad de contrato y propuesta a empresa.
+----------------------------------------------------------
+Clase 3
+
+Se crea un clone de una pagina web de uno de los 3 articulos indicados por el docente
+Link: https://medium.com/oceanize-geeks/15-html-best-practices-that-developers-should-know-cb02473d293f
+----------------------------------------------------------

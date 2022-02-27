@@ -1,0 +1,43 @@
+.sidebar {
+    height: 1000px;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 40px;
+    background-color: lightblue;
+    }
+    
+    .sidebar li {
+    padding: 8px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .link{
+        text-decoration: none;
+        color: black;   
+    }
+
+    .body-text {
+    margin-left: 200px;
+    font-size: 18px;
+    font-family: "Helvetica Neue", "Helvetica";
+    text-align: justify;
+    }
+    
+    .title{
+        margin-left: 200px;
+        font-family: "Helvetica Neue", "Helvetica";
+        font-size: 40px;
+    }
+
+    .subtitle{
+        margin-left: 200px;
+        font-family: "Helvetica Neue", "Helvetica";
+        font-size: 30px;
+    }
+
+    .img {
+        margin-left: 200px;
+    }

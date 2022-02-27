@@ -18,3 +18,7 @@ Clase 3
 Se crea un clone de una pagina web de uno de los 3 articulos indicados por el docente
 Link: https://medium.com/oceanize-geeks/15-html-best-practices-that-developers-should-know-cb02473d293f
 ----------------------------------------------------------
+Clase 4
+
+Se crea un sidebar sencillo empleando conceptos basicos de HTML 5 y CSS, pudiendo navegar en el articulo por medio de los links del sidebar
+----------------------------------------------------------

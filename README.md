@@ -22,3 +22,11 @@ Clase 4
 
 Se crea un sidebar sencillo empleando conceptos basicos de HTML 5 y CSS, pudiendo navegar en el articulo por medio de los links del sidebar
 ----------------------------------------------------------
+Clase 5
+
+Se cargan tablas por medio de Javascript, en base a las enviadas en clase
+----------------------------------------------------------
+Clase 7
+
+Se usa un formulario para busqueda en la API de Rick and Morty, y luego de cargar la tabla, se carga el formulario segun la fila en la que estemos
+----------------------------------------------------------

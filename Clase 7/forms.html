@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Formularios y tablas</title>
+</head>
+<body>
+    <form class = "form">
+        <h2>Rick And Morty</h2>
+        <p type="Nombre: " id="nombreForm">
+            <input placeholder="Escribe el nombre del personaje" id="nombre"></input>
+        </p>
+        
+        <p type="Estado: " id="estadoForm">
+            <input placeholder="Escribe el estado del personaje" id="estado"></input>
+        </p>
+
+        <p type="Especie: " id="especieForm">
+            <input placeholder="Escribe la especie del personaje" id="especie"></input>
+        </p>
+
+        <p type="Genero: " id="generoForm">
+            <input placeholder="Escribe el genero del personaje" id="genero"></input>
+        </p>
+        <button type="button" id="buscar" onclick="cargarTabla()">Buscar</button>
+    </form>
+    
+    <table > 
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Especie</th>
+            <th>Estado</th>
+            <th>Genero</th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody id="bodyData">
+        </tbody>
+    </table>
+
+    <script>
+        function cargarTabla() {
+            let tbody = document.querySelector("#bodyData")
+            var numFila = -1;
+            fetch("https://rickandmortyapi.com/api/character")
+            .then(res => res.json())
+            .then(data => {
+
+            let rowData = data.results.map(item => {
+                let nombre = document.querySelector("#nombre").value;
+                let estado = document.querySelector("#estado").value;
+                let especie = document.querySelector("#especie").value;
+                let genero = document.querySelector("#genero").value;
+
+                numFila++;
+                if((item.name.includes(nombre) && nombre != "") || (item.status.includes(estado)&& estado !="") ||
+                   (item.species.includes(especie) && especie != "") || (item.gender.includes(genero) && genero != "") ){
+                    return `<tr id=num${numFila} >
+                            <td>${item.name}</td>
+                            <td>${item.species}</td>
+                            <td>${item.status}</td>
+                            <td>${item.gender}</td>
+                            <td><img src="${item.image}"></td>
+                            <td><button onclick="cargarFormulario(${numFila})" class=${numFila} >Cargar</button></td>
+                            </tr>`
+                }
+                
+
+            }).join('')
+            
+            tbody.innerHTML = rowData
+            })
+        }
+
+        function cargarFormulario(numFila) {
+            let filas = document.querySelectorAll(`#num${numFila} td`);
+            let valorNombre = filas[0].innerHTML;
+            let valorEstado = filas[1].innerHTML;
+            let valorEspecie = filas[2].innerHTML;
+            let valorGenero = filas[3].innerHTML;
+
+            let nombre = document.querySelector("#nombre");
+            let estado = document.querySelector("#estado");
+            let especie = document.querySelector("#especie");
+            let genero = document.querySelector("#genero");
+
+            nombre.value = valorNombre;
+            estado.value = valorEstado;
+            especie.value = valorEspecie;
+            genero.value = valorGenero;
+       }
+    </script>
+    
+</body>
+</html>

@@ -30,3 +30,6 @@ Clase 7
 
 Se usa un formulario para busqueda en la API de Rick and Morty, y luego de cargar la tabla, se carga el formulario segun la fila en la que estemos
 ----------------------------------------------------------
+Clase 8
+
+Se utiliza un canvas para dibujar varias figuras en diferentes lugares del plano.

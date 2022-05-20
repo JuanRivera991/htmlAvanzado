@@ -44,4 +44,8 @@ Clase 8
 
 Clase 9
 
-Se agrega un juego de Ahorcado creado a partir del uso de Canvas
+## Se agrega un juego de Ahorcado creado a partir del uso de Canvas
+
+Clase 10
+
+## Se agrega animación de una imagen

@@ -1,0 +1,18 @@
+table{
+    display: table;
+    border-spacing: 0;
+    width: 500px;
+    height: 50px;
+}
+
+td, th{
+    padding: 5px;
+    border: 1px solid #BFBDB7;
+    text-align: center;
+}
+
+#gray{
+    padding: 5px;
+    background-color: #BFBDB7;
+    align-self: center;
+}

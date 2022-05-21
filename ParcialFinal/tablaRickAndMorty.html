@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesForm.css">
+    <title>Rick & Morty</title>
+</head>
+<body>    
+    <table > 
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Especie</th>
+            <th>Estado</th>
+            <th>Genero</th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody id="bodyData">
+        </tbody>
+    </table>
+
+    <script>
+        function cargarTabla() {
+            let tbody = document.querySelector("#bodyData")
+            var numFila = -1;
+            fetch("https://rickandmortyapi.com/api/character")
+            .then(res => res.json())
+            .then(data => {
+
+            let rowData = data.results.map(item => {
+
+                numFila++;
+                if((item.status.includes('Alive'))){
+                    return `<tr id=num${numFila} >
+                            <td>${item.name}</td>
+                            <td>${item.species}</td>
+                            <td>${item.status}</td>
+                            <td>${item.gender}</td>
+                            <td><img src="${item.image}"></td>
+                            </tr>`
+                }
+                
+
+            }).join('')
+            
+            tbody.innerHTML = rowData
+            })
+        }
+
+        cargarTabla();
+    </script>
+    
+</body>
+</html>

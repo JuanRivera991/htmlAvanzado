@@ -49,3 +49,7 @@ Clase 9
 Clase 10
 
 ## Se agrega animación de una imagen
+
+Clase Final
+
+## Para finalizar el curso de HTML se desarrollo un formulario de productos con IVA, se cargo una tabla con la API de Rick And Morty , se realizo la copia de una tabla guia y se creo un lienzo con canvas

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesForm.css">
+    <title>Formularios y tablas</title>
+</head>
+<body>
+    <form class = "form">
+        <h2>Incremento IVA Producto</h2>
+        <p type="Producto: " id="productoForm">
+            <input placeholder="Escribe el nombre del producto" id="producto"></input>
+        </p>
+        
+        <p type="Precio: " id="precioForm">
+            <input placeholder="Escribe el precio del producto" id="precio"></input>
+        </p>
+
+        <p type="IVA: " id="ivaForm">
+            <input placeholder="Escribe el IVA del producto" id="iva"></input>
+        </p>
+
+        <button type="button" id="buscar" onclick="cargarTabla()">Añadir</button>
+    </form>
+    
+    <table > 
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>IVA</th>
+            <th>Total + IVA</th>
+          </tr>
+        </thead>
+        <tbody id="bodyData">
+        </tbody>
+    </table>
+
+    <script>
+        var numFila = 0;
+        function cargarTabla() {
+            let tbody = document.querySelector("#bodyData")
+            
+            numFila++;
+
+            let producto = document.querySelector("#producto").value;
+            let precio = document.querySelector("#precio").value;
+            let iva = document.querySelector("#iva").value;
+            let total = (precio * ((iva/100) + 1) );
+
+            let fila =  `<tr id=num${numFila} >
+                            <td>${producto}</td>
+                            <td>${precio}</td>
+                            <td>${iva}%</td>
+                            <td>${total}</td>
+                            </tr>`;
+            
+            tbody.innerHTML = tbody.innerHTML + fila;
+            
+        }
+    </script>
+    
+</body>
+</html>
